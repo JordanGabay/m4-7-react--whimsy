@@ -8,8 +8,12 @@ const Stats = () => {
     return(
         <>
         <StatsDiv>
+            <StatsInfo>
             <Span><strong>{numOfRetweets}</strong> Retweets</Span>
+            </StatsInfo>
+            <StatsInfo>
             <Span><strong>{numOfLikes}</strong> Likes</Span>
+            </StatsInfo>
         </StatsDiv>
         </>
     )
@@ -23,6 +27,10 @@ const StatsDiv = styled.div`
 
 const Span = styled.span`
 margin-right: 1rem;
+`
+
+const StatsInfo = styled.div`
+
 `
 
 
