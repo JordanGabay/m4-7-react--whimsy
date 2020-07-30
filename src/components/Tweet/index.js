@@ -1,8 +1,9 @@
-import React, { useContext } from "react";
+import React from "react";
 import styled from "styled-components";
 import {TweetContext} from './TweetContext'
 import Header from "./Header";
 import ActionBar from "./ActionBar";
+import Stats from './Stats';
 
 
 const Tweet = () => {
@@ -13,6 +14,8 @@ const Tweet = () => {
       <TweetContents>{tweetContents}</TweetContents>
       <Timestamp>{date}</Timestamp>
       <Divider />
+      <Stats/>
+      <Divider/>
       <ActionBar/>
       <Divider />
     </Wrapper>
@@ -42,12 +45,6 @@ const Timestamp = styled.div`
 const Divider = styled.div`
   height: 1px;
   background: rgb(230, 236, 240);
-`;
-
-const Stats = styled.div`
-  display: flex;
-  align-items: center;
-  height: 48px;
 `;
 
 export default Tweet;
